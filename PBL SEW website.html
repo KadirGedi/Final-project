@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Graduation 2026</title>
+
+ <style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(to bottom,#ffd6e0,#000000,#ffffff);
+    color:#333;
+}
+
+.container{
+    padding:60px 20px;
+    text-align:center;
+}
+
+h1{
+    font-size:55px;
+    color:#ff4d6d;
+}
+
+.box{
+    background:rgb(230, 226, 226);
+    width:80%;
+    margin:40px auto;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(175, 167, 167, 0.1);
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+img{
+    width:80%;
+    max-width:600px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+#timer{
+    font-size:35px;
+    color:#6a00f4;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+.extra{
+    height:300px;
+    padding:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Graduation 2026 🎉</h1>
+
+    <div class="box">
+
+        <h2>Countdown To Graduation</h2>
+
+        <div id="timer"></div>
+
+    </div>
+
+    <div class="box">
+
+        <p>
+            Graduation is finally here, and it honestly feels unreal.
+            After 4 years of projects, exams, memories, friendships,
+            and stressful nights, we finally made it.
+        </p>
+
+        <br>
+
+        <p>
+            During the celebration, we’ll be taking pictures,
+            throwing our graduation hats in the air,
+            laughing with friends, enjoying performances,
+            and celebrating one last time together.
+        </p>
+
+        <br>
+
+        <p>
+            We’re proud of how far we’ve come.
+            Soon, real life begins after graduation,
+            college, jobs, responsibilities, and new dreams.
+            Even though everyone may go separate ways,
+            these memories will always stay with us forever.
+        </p>
+
+        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+    <div class="box extra">
+
+        <h2>✨ Class of 2026 ✨</h2>
+
+        <p>
+            Thank you for the memories, laughter, and unforgettable moments.
+        </p>
+
+        <p>Kadir Gedi</p>
+
+    </div>
+
+</div>
+
+<script>
+
+let graduation = new Date("May 30, 2026 00:00:00").getTime();
+
+let x = setInterval(function(){
+
+let now = new Date().getTime();
+
+let distance = graduation - now;
+
+let days = Math.floor(distance / (1000*60*60*24));
+let hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+let minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+
+document.getElementById("timer").innerHTML =
+days + " Days " + hours + " Hours " + minutes + " Minutes";
+
+},1000);
+
+</script>
+
+</body>
+</html>
